@@ -20,20 +20,20 @@ from bookkeeping import documents,directories,get_human_documents,del_document_3
 from API_REST import TOKEN_YA,create_folder,checking_folder_creation, wrong_create_folder, wrong_checking_folder_creation
 
 
-# class TestBookkeeping(unittest.TestCase):
-#     def setUP(self):
-#         pass
-#     def tearDown(self):
-#         pass
-#     def test_number_doc_hum(self):
-#         self.assertEqual(get_human_documents('10006'),'Аристарх Павлов')
-#     def test_del_doc_number(self):
-#         self.assertNotEqual(get_human_documents('10006'), documents,directories)
-#     def test_add_new_data(self):
-#         self.assertNotEqual(get_new_documents_and_shelf('1','2','3','4'), documents, directories)
-#
-# if __name__ == '__main__':
-#     unittest.main()
+class TestBookkeeping(unittest.TestCase):
+    def setUP(self):
+        pass
+    def tearDown(self):
+        pass
+    def test_number_doc_hum(self):
+        self.assertEqual(get_human_documents('10006'),'Аристарх Павлов')
+    def test_del_doc_number(self):
+        self.assertNotEqual(get_human_documents('10006'), documents,directories)
+    def test_add_new_data(self):
+        self.assertNotEqual(get_new_documents_and_shelf('1','2','3','4'), documents, directories)
+
+if __name__ == '__main__':
+    unittest.main()
 
 """Задача №2 Автотест API Яндекса
 Проверим правильность работы Яндекс.Диск REST API. Написать тесты, проверяющий создание папки на Диске.
